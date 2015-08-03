@@ -7,8 +7,14 @@ class BattleshipsWeb < Sinatra::Base
     erb :index
   end
 
-  get "/play" do
-    "What's your name?"
+  get '/name_set' do
+    erb :enter_name
+  end
+
+  get '/play' do
+    @name=params[:name]
+    erb :game
+
   end
 
   # start the server if ruby file executed directly
