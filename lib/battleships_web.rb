@@ -14,7 +14,6 @@ class BattleshipsWeb < Sinatra::Base
   get '/play' do
     @name=params[:name]
     erb :game
-
   end
 
   # start the server if ruby file executed directly

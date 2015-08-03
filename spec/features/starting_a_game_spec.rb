@@ -10,4 +10,11 @@ feature "starting a new game" do
     click_button "Submit"
     expect(page).to have_content "Hello, #{our_name}"
   end
+  scenario "gives default name if name not submitted" do
+    visit "/"
+    click_link "New Game"
+    click_button "Submit"
+    expect(page).to have_content "Hello, Player1"
+  end
+
 end

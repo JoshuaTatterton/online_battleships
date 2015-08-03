@@ -1,4 +1,7 @@
 <div>
-  Hello, <%= @name %>
-
+  <% if @name != "" %>
+    Hello, <%= @name %>
+  <% else %>
+    Hello, Player1
+  <% end %>
 </div>
